@@ -9,6 +9,6 @@ services:
       - ORACLE_PWD=Oracle123
     volumes:
       - oracle-data:/opt/oracle/oradata
-      - ./scripts:/opt/oracle/scripts/startup
+      - ./scripts:/docker-entrypoint-initdb.d   # ← THIS IS THE MAGIC LINE
 volumes:
   oracle-data:
